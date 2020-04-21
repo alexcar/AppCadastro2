@@ -2,6 +2,13 @@
 {
 	public class FormacaoAcademica
 	{
-		public string Descricao { get; set; }
+		public FormacaoAcademica(int id, string descricao)
+		{
+			Id = id;
+			Descricao = descricao;
+		}
+
+		public int Id { get; private set; }
+		public string Descricao { get; private set; }
 	}
 }

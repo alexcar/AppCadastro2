@@ -2,6 +2,13 @@
 {
 	public class NaturezaOcupacao
 	{
-		public string Descricao { get; set; }
+		public NaturezaOcupacao(int id, string descricao)
+		{
+			Id = id;
+			Descricao = descricao;
+		}
+
+		public int Id { get; private set; }
+		public string Descricao { get; private set; }
 	}
 }

@@ -2,6 +2,14 @@
 {
 	public class TipoImovel
 	{
-		public string Descricao { get; set; }
+		public TipoImovel(string descricao, int id)
+		{
+			Id = id;
+			Descricao = descricao;
+		}
+
+		public int Id { get; private set; }
+		public string Descricao { get; private set; }
+
 	}
 }
