@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using AppCadastro.Domain.ValueObjects;
 using Flunt.Notifications;
 
 namespace AppCadastro.Domain.Entities
@@ -8,17 +9,14 @@ namespace AppCadastro.Domain.Entities
 	{
 		public PessoaFisica(
 			int id,
-			string nome, 
-			string cpf, 
+			Nome nome, 
+			Cpf cpf, 
 			int idEstadoCivil, 
 			EstadoCivil estadoCivil, 
 			string nomeTratamento, 
 			string sexo, 
 			DateTime dataNascimento, 
-			string documento, 
-			DateTime dataExpedicaoDocumento, 
-			string orgaoExpedicaoDocumento, 
-			int idEstadoExpedicaoDocumento, 
+			Documento documento, 
 			int idEscolaridade, 
 			Escolaridade escolaridade, 
 			int idFormacaoAcademica, 
@@ -28,11 +26,11 @@ namespace AppCadastro.Domain.Entities
 			string telefone, 
 			string dddCelular, 
 			string celular, 
-			string email, 
+			Email email, 
 			bool autorizaContatoEmail, 
 			string nomeConjuge, 
 			DateTime dataNascimentoConjuge, 
-			string cpfConjuge, 
+			Cpf cpfConjuge, 
 			int idEndereco, 
 			Endereco endereco, 
 			int idDadosProfissionais, 
@@ -48,9 +46,6 @@ namespace AppCadastro.Domain.Entities
 			Sexo = sexo;
 			DataNascimento = dataNascimento;
 			Documento = documento;
-			DataExpedicaoDocumento = dataExpedicaoDocumento;
-			OrgaoExpedicaoDocumento = orgaoExpedicaoDocumento;
-			IdEstadoExpedicaoDocumento = idEstadoExpedicaoDocumento;
 			IdEscolaridade = idEscolaridade;
 			Escolaridade = escolaridade;
 			IdFormacaoAcademica = idFormacaoAcademica;
@@ -73,17 +68,14 @@ namespace AppCadastro.Domain.Entities
 		}
 
 		public int Id { get; private set; }
-		public string Nome { get; private set; }
-		public string Cpf { get; private set; }
+		public Nome Nome { get; private set; }
+		public Cpf Cpf { get; private set; }
 		public int IdEstadoCivil { get; private set; }
 		public EstadoCivil EstadoCivil { get; private set; }
 		public string NomeTratamento { get; private set; }
 		public string Sexo { get; private set; } // enum
 		public DateTime DataNascimento { get; private set; }
-		public string Documento { get; private set; }
-		public DateTime DataExpedicaoDocumento { get; private set; }
-		public string OrgaoExpedicaoDocumento { get; private set; }
-		public int IdEstadoExpedicaoDocumento { get; private set; }
+		public Documento Documento { get; private set; }
 		public int IdEscolaridade { get; private set; }
 		public Escolaridade Escolaridade { get; private set; }
 		public int IdFormacaoAcademica { get; private set; }
@@ -93,11 +85,11 @@ namespace AppCadastro.Domain.Entities
 		public string Telefone { get; private set; }
 		public string DddCelular { get; private set; }
 		public string Celular { get; private set; }
-		public string Email { get; private set; }
+		public Email Email { get; private set; }
 		public bool AutorizaContatoEmail { get; private set; }
 		public string NomeConjuge { get; private set; }
 		public DateTime DataNascimentoConjuge { get; private set; }
-		public string CpfConjuge { get; private set; }
+		public Cpf CpfConjuge { get; private set; }
 		public int IdEndereco { get; private set; }
 		public Endereco Endereco { get; private set; }
 		public int IdDadosProfissionais { get; private set; }
